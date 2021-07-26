@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+<bean id="BankAccountList" class="com.spring.BankAccountList"/>  
+
+<bean id="bankAccountRepositoryImpl" class="com.spring.repository.BankAccountRepositoryImpl" autowire = "byName">  
+	</bean> 
+	
+	<bean id="bankAccountServiceImpl" class="com.spring.service.BankAccountServiceImpl" autowire = "byType">  
+	</bean> 
+	
+	<bean id="bankAccountContoller" class="com.spring.controller.BankAccountContoller">
+	<constructor-arg ref = "bankAccountServiceImpl"/>  
+	</bean> 
+</beans>	
